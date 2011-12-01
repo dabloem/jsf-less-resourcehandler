@@ -32,7 +32,7 @@ public class LessResourceHandler extends ResourceHandlerWrapper {
     public Resource createResource(String resourceName, String libraryName) {
         if (resourceName.endsWith(".less")){
             FacesContext fc = FacesContext.getCurrentInstance();
-            String serverside = fc.getExternalContext().getInitParameter("less.serverside");
+            String serverside = fc.getExternalContext().getInitParameter("less.clientside");
             Logger.getLogger(LessResourceHandler.class.getName()).log(Level.INFO, "Less Resource Handler scanning {0}", resourceName);
             Resource createResource = wrapped.createResource(resourceName, libraryName);
             return new LessResource(createResource, Boolean.parseBoolean(serverside));

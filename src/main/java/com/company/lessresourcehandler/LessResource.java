@@ -23,7 +23,7 @@ public class LessResource extends ResourceWrapper {
 
     private Resource wrapped;
     private LessEngine engine;
-    private Boolean serverside;
+    private Boolean clientside;
     
     public LessResource(Resource resource) {
         wrapped = resource;
@@ -31,7 +31,7 @@ public class LessResource extends ResourceWrapper {
 
     public LessResource(Resource wrapped, Boolean serverside) {
         this.wrapped = wrapped;
-        this.serverside = serverside;
+        this.clientside = serverside;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class LessResource extends ResourceWrapper {
         try {
             String content = slurp(wrapped.getInputStream());
             Logger.getLogger(LessResource.class.getName()).log(Level.INFO, "less file before {0}", content);
-            if (serverside){
+            if (!clientside){
                 String compiled = engine.compile(content);
                 Logger.getLogger(LessResource.class.getName()).log(Level.INFO, "css file after {0}", compiled);
                 return new ByteArrayInputStream(compiled.getBytes("UTF-8"));
