@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment>
+    <mime-mapping>
+        <extension>less</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>    
+</web-fragment>
