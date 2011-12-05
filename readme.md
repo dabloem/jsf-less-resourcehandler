@@ -2,7 +2,7 @@
 Add the lib to your web-app, and you can use h:outputStylesheet name="somefile.less"</code>.
 There is also a less component, which add the less.js resource to the page for client-side compilation of the less resource:
 
-    <ldn:lessOutputStylesheet name="simple.less"/>
+    <ldn:lessOutputStylesheet name="simple.css"/>
 
 ###Example simple.less###
 
