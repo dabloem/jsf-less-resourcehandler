@@ -4,6 +4,8 @@ There is also a less component, which add the less.js resource to the page for c
 
     <ldn:lessOutputStylesheet name="simple.css"/>
 
+note: suffix the less/css resource .css instead of .less, otherwise the resourcehandler will compile server-side.
+
 ###Example simple.less###
 
     .box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
@@ -19,3 +21,7 @@ There is also a less component, which add the less.js resource to the page for c
       border-color: lighten(@base, 30%);
       div { .box-shadow(0, 0, 5px, 0.4) }
     }
+
+Note: @import doesn't work server-side nor client-side (yet).
+
+more information [here](dabloem.blogspot.com "JSF Blog")
