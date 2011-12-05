@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.lessresourcehandler;
+package nl.dabloem.jsf.less;
 
 import com.asual.lesscss.LessEngine;
 import com.asual.lesscss.LessException;
@@ -60,7 +60,7 @@ public class LessResource extends ResourceWrapper {
                 return new ByteArrayInputStream(content.getBytes("UTF-8"));
             }
         } catch (LessException ex) {
-            Logger.getLogger(LessResource.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LessResource.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
             return new ByteArrayInputStream(String.format("/* %s */", ex.getMessage()).getBytes("UTF-8"));
         }
     }

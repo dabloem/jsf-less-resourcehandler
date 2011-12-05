@@ -33,6 +33,11 @@
       <version>1.1.4</version>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>com.sun.faces</groupId>
+      <artifactId>jsf-impl</artifactId>
+      <version>2.1.3_01</version>
+    </dependency>
   </dependencies>
   <repositories>  
     <repository>  

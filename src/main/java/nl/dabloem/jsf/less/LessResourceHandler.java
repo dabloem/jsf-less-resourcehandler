@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.lessresourcehandler;
+package nl.dabloem.jsf.less;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
